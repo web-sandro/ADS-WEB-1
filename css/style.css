@@ -1,7 +1,38 @@
-span {
-    color: #e90e0e;
+
+
+#header{
+    height: 80px;
+    width: 100%;
+    background-color: #e9830e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-body {
-    background: #bae90e;
-    margin: 1px;
+
+#sidebar{
+    width: 150px;
+    background-color: aqua;
+}
+#content{
+    width: 680;
+    background-color: blue;
+}
+
+#footer{
+    height: 150px;
+    width: 100%;
+    color: #fff;
+    background-color: #0f0f0f;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.flex-row{
+    display: flex;
+}
+
+#menu{
+    height: 50px;
+    width: 50px;
+    background-color: blueviolet;
 }

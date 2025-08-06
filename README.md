@@ -14,3 +14,7 @@
  seletor{
     propiedade: valor;
 } 
+
+
+ <!DOCTYPE html>
+montar corretamente o site
