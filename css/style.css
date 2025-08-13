@@ -10,14 +10,22 @@ h1 {
 span { 
     color: #04047d;
 }
-
+img {
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+  }
 #header {
     height: 80px;
     background-color: #867d0b;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
+ }
+ /*
+img {
+    height: 40;
+} */
 
 #sidebar {
     height: 400px;
@@ -44,7 +52,10 @@ span {
 }
 
 #menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     height: 50px;
-    width: 50px;
+    width: 400px;
     background-color: #e4267c;
 }

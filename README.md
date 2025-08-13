@@ -20,7 +20,9 @@ Destaque do texto                 b, i, span
 
 div                                criar divisões para estruturar o documento
 
-id                                 sóum por pagina
+id                                 sóum por pagina não pode repitir
+
+tags semantica                     posso repitir
 
 class                              varios na mesma pagina 
 
@@ -37,3 +39,6 @@ git -v (verifica a versão do git) // configura Nome e Email para realizar os co
 git config --global user.name "Renan Cavichi"
 git config --global user.email " renancavichi@gmail.com "
 git init (inicia o git em um projeto ou pasta)
+
+
+estrutura semantica https://www.w3schools.com/html/html5_semantic_elements.asp
