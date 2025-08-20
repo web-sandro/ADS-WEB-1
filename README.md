@@ -1,44 +1,33 @@
-# Tópicos importentes
+# Tópicos Importantes
 
 ## HTML
- - Estrutura basica de HTML
+- Doctype html 5
+- Estrutura Básica do HTML
     - html, head, title, body
-  - style
-  - Tags de texto: h1....h6, p
-  - destaque do tyexto: b, i, span
+- Tag Style
+- Tags de Texto: h1...h6, p
+- Destaque do Texto: b, i, span
+- div (id e class)
 
 
- <!DOCTYPE html>                  montar corretamente o site
-
-HTML                              Estrutura Básica do html, cabeçalho, título, corpo, style
-
-puxar img ou css para a pagina    link rel="stylesheet" href="style.css"
-
-Tags de texto:                    h1...h6, p
-
-Destaque do texto                 b, i, span
-
-div                                criar divisões para estruturar o documento
-
-id                                 sóum por pagina não pode repitir
-
-tags semantica                     posso repitir
-
-class                              varios na mesma pagina 
-
-## CSS                             Externo, interno, in-line sintaxedo codigo css
-
- seletor{
-    propiedade: valor;
-} 
-
-CSS                                Externo, Interno e In-line Sintaxe do código css ID e Classes
-Flexbox (display: flex e outros elementos) - https://flexboxfroggy.com/
-Comandos Git
-git -v (verifica a versão do git) // configura Nome e Email para realizar os commits
-git config --global user.name "Renan Cavichi"
-git config --global user.email " renancavichi@gmail.com "
-git init (inicia o git em um projeto ou pasta)
+## CSS
+- Externo, Interno e In-line
+- Sintaxe do código css
+- ID e Classes
+- Flexbox (display: flex e outros elementos) - https://flexboxfroggy.com/
+- seletores
+  - filho de
+  - , seletor e
+- margin e padding
+- medidas relatativas (% e vh e vw)
+- tipos de cores
+- font-family
 
 
-estrutura semantica https://www.w3schools.com/html/html5_semantic_elements.asp
+## Comandos Git
+
+- git -v (verifica a versão do git)
+  // configura Nome e Email para realizar os commits
+- git config --global user.name "Renan Cavichi"
+- git config --global user.email "renancavichi@gmail.com"
+- git init (inicia o git em um projeto ou pasta)
