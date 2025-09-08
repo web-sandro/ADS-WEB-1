@@ -123,6 +123,33 @@ main {
     font-size: 18px;
     box-shadow: inset 0px 1px 2px rgba(0,0,0,0.1);
 }
+
+.modal select,
+.modal input[type="text"],
+.modal input[type="number"],
+.modal input[type="email"],
+.modal input[type="password"],
+.modal .fake-input {
+    height: 40px;               
+    padding: 6px 10px;          
+    border: 1px solid #ccc;     
+    border-radius: 6px;         
+    font-size: 16px;            
+    box-sizing: border-box;     
+    background: #fff;
+    color: #333;
+    display: flex;
+    align-items: center;        /* centraliza texto vertical */
+}
+
+/* deixa o <p> (fake-input) com comportamento de caixa */
+.modal .fake-input {
+    min-width: 60px;       /* largura mínima */
+    text-align: right;     /* números alinhados à direita */
+    font-weight: bold;
+}
+
+
 .box_2 {
     height: 45px;
     display: flex;
@@ -166,8 +193,19 @@ main {
     gap: 20px;
 }
 .box_3_1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-left: 5px;
     font-weight: bold;
+    min-width: 30px;
+    font-size: 20px;
+    background: #e6efff;
+    color: #0a3d62;
+}
+.box_3_1 p{
+    font-weight: bold;
+    border: 1px solid #0a3d62;
     min-width: 30px;
     font-size: 20px;
     background: #e6efff;
@@ -189,18 +227,52 @@ main {
     min-width: 60px;
 }
 .modal {
-    position: absolute;
-    background: #f3f4f5e8;
-    display: none;
+    position: fixed;           /* Fixa na tela */
+    top: 0;                    /* Começa no topo */
+    left: 0;                   /* Começa na esquerda */
+    right: 0;                  /* Vai até a direita */
+    bottom: 0;                 /* Vai até o fim da tela */
     width: 100%;
     height: 100%;
+    background: rgba(243, 244, 245, 0.562); /* Fundo semi-transparente */
+    color: #0a0a0a;
+    display: none;             /* Inicia oculto */
+    justify-content: center;   /* Centralizar conteúdo */
+    align-items: center;       /* Centralizar verticalmente */
+    z-index: 9999;             /* Sempre acima do resto */
+    border: 1px solid red;   /* Apenas para visualização */
 }
-
-
-
-
-
-
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    max-width: 90%;
+}
+.modal nav ul{
+    margin-right: 10px;
+    display: flex;
+    gap: 0px 10px;
+}
+.modal nav ul li{
+    width: 140px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    list-style-type: none;
+    border: 1px solid #ae5ef0;
+}   
+.modal nav ul li:hover{
+    background: linear-gradient(50deg, #47ee05, #f8fafa);
+    color: #ffffff;
+    border: 2px solid #d211ec;
+    box-sizing: border-box;
+    transition: 0.3s;
+    transform: scale(1.05);
+}
 footer {
     height: 120px;
     background-color: black;

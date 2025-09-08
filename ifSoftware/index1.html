@@ -53,16 +53,56 @@
             </main>
             <main>
                 <div class="modal">
-                    <div class="card">
-                        <label for="">Bolsa</label>
-                        <input type="text">
-                        <label for="">Bolsa</label>
-                        <input type="text">
-                        <label for="">Bolsa</label>
-                        <input type="text">
-                        <label for="">Bolsa</label>
-                        <input type="text">
-                        <button onclick="fecharModal()">Fechar</button>
+                    <div class="modal-content">
+                        <div class="box_1">
+                            <div class="box_1_1">
+                                <label for="ifsoftware">IFSoftware</label>
+                            </div>
+                            <div class="box_1_2">
+                                <select name="bolsa" id="bolsa">
+                                    <option value="nasdaq">Nasdaq</option>
+                                    <option value="nyse">NYSE</option>
+                                </select>
+                            </div>
+                        </div><br>
+                        <div class="box_2">
+                            <div class="box_2_1">
+                                <select name="pontos" id="pontos">
+                                    <option value="+">+</option>
+                                    <option value="-">-</option>
+                                </select>
+                            </div>
+                            <div class="box_2_2">
+                                <select name="sifrao" id="sifrao">
+                                    <option value="r">R$</option>
+                                    <option value="$">$U</option>
+                                </select>
+                            </div>
+                            <div class="box_2_3">
+                                <label for="valor">Valor</label>
+                                <input type="text" id="valor" name="valor"><br>
+                            </div>
+                        </div>
+                        <div class="box_3">
+                            <div class="box_3_1">
+                                <select name="ativos" id="ativos">
+                                    <option value="ativos">ativos</option>
+                                    <option value="passivos">passivos</option>
+                                </select>
+                                <p class="fake-input" id="resultado">123</p>
+                            </div>
+                            <select name="sifrao" id="sifrao">
+                                <option value="r">R$</option>
+                                <option value="$">$U</option>
+                            </select>
+                            <input type="text" id="total" name="total" placeholder="Total">
+                        </div><br>
+                        <nav>
+                            <ul>
+                                <li><button onclick="cadastrar()">Cadastrar</button></li><br />
+                                <li><button onclick="fecharModal()">Fechar</button></li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </main>
