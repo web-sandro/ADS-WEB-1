@@ -37,7 +37,7 @@
                             </div>
                         </div>
                         <div class="box_2">
-                            <div class="box_2_1">@</div>
+                            <div class="box_2_1">+</div>
                             <div class="box_2_2">R$</div>
                             <div class="box_2_3">500,00</div>
                         </div>
@@ -53,10 +53,10 @@
             </main>
             <main>
                 <div class="modal">
-                    <div class="modal-content">
+                    <form class="modalContent" onsubmit="addModalContent(event)">
                         <div class="box_1">
                             <div class="box_1_1">
-                                <label for="ifsoftware">IFSoftware</label>
+                                <label for="ifsoftware">APsoftware</label>
                             </div>
                             <div class="box_1_2">
                                 <select name="bolsa" id="bolsa">
@@ -67,43 +67,32 @@
                         </div><br>
                         <div class="box_2">
                             <div class="box_2_1">
-                                <select name="pontos" id="pontos">
-                                    <option value="+">+</option>
-                                    <option value="-">-</option>
-                                </select>
-                            </div>
-                            <div class="box_2_2">
-                                <select name="sifrao" id="sifrao">
-                                    <option value="r">R$</option>
-                                    <option value="$">$U</option>
-                                </select>
-                            </div>
-                            <div class="box_2_3">
-                                <label for="valor">Valor</label>
-                                <input type="text" id="valor" name="valor"><br>
+                                <div class="input-group">
+                                    <select id="moeda" name="moeda">
+                                        <option value="r">R$</option>
+                                        <option value="$">$U</option>
+                                    </select>
+                                    <p id="valor-moeda">R$ 50.00</p>
+                                </div>
                             </div>
                         </div>
                         <div class="box_3">
                             <div class="box_3_1">
-                                <select name="ativos" id="ativos">
-                                    <option value="ativos">ativos</option>
-                                    <option value="passivos">passivos</option>
-                                </select>
-                                <p class="fake-input" id="resultado">123</p>
+                                <input type="number" id="quantidade" name="quantidade" placeholder="Ativos" min="1">
                             </div>
-                            <select name="sifrao" id="sifrao">
-                                <option value="r">R$</option>
-                                <option value="$">$U</option>
-                            </select>
-                            <input type="text" id="total" name="total" placeholder="Total">
-                        </div><br>
-                        <nav>
-                            <ul>
-                                <li><button onclick="cadastrar()">Cadastrar</button></li><br />
-                                <li><button onclick="fecharModal()">Fechar</button></li>
-                            </ul>
-                        </nav>
-                    </div>
+                            <div class="box_3_2">
+                                <p id="valor-total">R$ 50.00</p>
+                            </div>
+                        </div>
+                        <div class="box_4">
+                            <nav>
+                                <ul>
+                                    <li><input type="submit" value="Cadastrar"></li><br />
+                                    <li><button onclick="fecharModal()">Fechar</button></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </form>
                 </div>
             </main>
         </div>

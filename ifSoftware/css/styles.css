@@ -8,7 +8,8 @@ body, html {
 .wrapper {
     background-color: rgba(18, 95, 167, 0.603);
     display: flex;
-    width: 100%;
+    margin: 0 auto;
+    width: 1000px;
     min-height: 100%;
 }
 header {
@@ -72,27 +73,44 @@ header img{
 .dv {
     background: #47ee05;
 }
-.flexrow{
+.flexrow {
+    margin-top: 20px;
     display: flex;
     width: 1000px;
-    height: 900px;
+    min-height: 500px;
     gap: 20px;
 }
+
 aside {
     width: 200px;
-    min-height: calc(100vh - 210px);
+    min-height: calc(50vh - 210px);
     background-color: bisque;
 }
-main {
-    height: 200px;
-    display: block;
-    background-color: #4e4d4d;
+.main {
+    flex: 1;                   
+    display: flex;
+    flex-wrap: wrap;               
+    border-radius: 10px;
+    background-color: #ececec;    
+    overflow-y: auto;             
+    max-height: 500px;           
 }
+
+
 .card {
-    display: block;
+    background-color: #5b74da;
+    border: 3px solid #18bd2b;
     width: 300px;
-    height: 200px;
+    height: 230px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    color: #fff;
 }
+
 .box_1 {
     display: flex;
     align-items: center;
@@ -123,7 +141,6 @@ main {
     font-size: 18px;
     box-shadow: inset 0px 1px 2px rgba(0,0,0,0.1);
 }
-
 .modal select,
 .modal input[type="text"],
 .modal input[type="number"],
@@ -139,48 +156,90 @@ main {
     background: #fff;
     color: #333;
     display: flex;
-    align-items: center;        /* centraliza texto vertical */
+    align-items: center;      
 }
-
-/* deixa o <p> (fake-input) com comportamento de caixa */
 .modal .fake-input {
-    min-width: 60px;       /* largura mínima */
-    text-align: right;     /* números alinhados à direita */
+    min-width: 60px;      
+    text-align: right;   
     font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
-
-
 .box_2 {
     height: 45px;
     display: flex;
+    flex-direction: row;
     align-items: center;
+    padding: 8px 0px;   
+    background: #e6efff;
+    color: #0a3d62;
+    border-radius: 8px;
     gap: 5px;
 }
 .box_2_1 {
-    font-weight: bold;
-    font-size: 20px;
-    background: #e6efff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: 700px;
     color: #0a3d62;
     padding: 3px 8px;
     border-radius: 6px;
+    gap: 30px;
 }
 .box_2_2 {
+    width: 80px;
+    display: flex;
+    text-align: right;
+    justify-content: right;
+    font-size: 22px;
+    font-weight: 700px;
+    color: #0a3d62;
+    padding: 3px 8px;
+}
+.box_2_3 {
     font-weight: bold;
+    width: 140px;
     font-size: 20px;
     background: #e6efff;
     color: #0a3d62;
-    padding: 3px 8px;
-    border-radius: 6px;
-}
-.box_2_3 {
-    flex: 1;
     text-align: right;
-    font-size: 22px;
-    font-weight: 700;
-    background: #fff;
-    color: #0a3d62;
-    padding: 3px 8px;
-    border-radius: 6px;
+    min-width: 60px;
+}
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+#valor-moeda,
+#valor-total {
+  margin: 0;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+  color: #333;
+  min-width: 100px;
+  text-align: right;
+}
+.input-group select,
+.input-group input {
+  height: 100%;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.input-group select {
+  border-radius: 6px 0 0 6px;
+  padding: 0 10px;
+}
+.input-group input {
+  flex: 1;
+  padding: 0 10px;
+  border-left: none;
+  border-radius: 0 6px 6px 0;
 }
 .box_3 {
     height: 40px;
@@ -204,14 +263,19 @@ main {
     color: #0a3d62;
 }
 .box_3_1 p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-weight: bold;
-    border: 1px solid #0a3d62;
     min-width: 30px;
     font-size: 20px;
     background: #e6efff;
     color: #0a3d62;
 }
 .box_3_2, .box_3_3, .box_3_4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-weight: bold;
     min-width: 30px;
     font-size: 20px;
@@ -219,6 +283,9 @@ main {
     color: #0a3d62;
 }
 .box_3_5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-weight: bold;
     font-size: 20px;
     background: #e6efff;
@@ -242,7 +309,7 @@ main {
     z-index: 9999;             /* Sempre acima do resto */
     border: 1px solid red;   /* Apenas para visualização */
 }
-.modal-content {
+.modalContent {
     background: white;
     padding: 20px;
     border-radius: 8px;
@@ -276,8 +343,4 @@ main {
 footer {
     height: 120px;
     background-color: black;
-}
-.wrapper{
-    margin: 0 auto;
-    width: 1000px;
 }
