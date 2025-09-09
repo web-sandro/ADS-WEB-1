@@ -85,8 +85,8 @@ header img{
     display: flex;
     width: 1000px;
     min-height: 550px;
-    overflow-y: auto;
 }
+
 aside {
     width: 200px;
     min-height: calc(50vh - 210px);
@@ -99,13 +99,12 @@ aside {
     margin-left: 3px;
     margin-right: auto;              
     border-radius: 10px;
-    background-color: #5b74da;       
-    max-height: 240px;  
+    background-color: #ececec;       
+    max-height: 235px;  
 }
 main {                 
     display: flex;
     flex-wrap: wrap;
-    height: 235px;
     margin-left: 3px;
     margin-right: auto;              
     border-radius: 10px;
@@ -115,7 +114,7 @@ main {
 .card {
     background-color: #5b74da;
     border: 3px solid #18bd2b;
-    width: 315px;
+    width: 320px;
     height: 230px;
     border-radius: 10px;
     display: flex;
