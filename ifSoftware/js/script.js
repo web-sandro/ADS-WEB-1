@@ -14,11 +14,11 @@ function addModalContent(event) {
 
   const form = event.target;
 
-  const bolsa = form.bolsa.value;               // select bolsa
-  const moeda = form.moeda.value;               // select moeda
-  const ativos = parseInt(form.quantidade.value) || 0; // input quantidade
+  const bolsa = form.bolsa.value;
+  const moeda = form.moeda.value;
+  const ativos = parseInt(form.quantidade.value) || 0;
 
-  // define valor por moeda
+
   let valor = 0;
   let simboloMoeda = "";
   if (moeda === "r") {
@@ -33,7 +33,7 @@ function addModalContent(event) {
 
   const cardHTML = `
 
-      <div class="card">
+      <div class="card" onmouseenter="showButtons(event)" onmouseleave="hideButtons(event)">
         <div class="box_1">
           <div class="box_1_1">
             <h4>IFSoftware</h4>
@@ -54,15 +54,38 @@ function addModalContent(event) {
           <div class="box_3_4">${simboloMoeda}</div>
           <div class="box_3_5" style="text-align:right">${total.toFixed(2)}</div>
         </div>
+        <div class="buttons">
+            <button type="button" onclick="">Editar</button>
+            <button type="button" onclick="deleteCard(event)">Excluir</button>
+        </div>
       </div>
   
   `;
 
-  const cards = document.querySelector(".main"); // coloca no main existente
+  const cards = document.querySelector(".main");
   cards.innerHTML += cardHTML;
 
   fecharModal();
 }
+
+function showButtons(event) {
+  const card = event.target
+  const buttons = card.querySelector(".buttons")
+  buttons.style.display = "flex"
+}
+
+function hideButtons(event) {
+  const card = event.target
+  const buttons = card.querySelector(".buttons")
+  buttons.style.display = "none"
+}
+
+function deleteCard(event) {
+  const buttonDelete = event.target
+  const card = buttonDelete.closest(".card")
+  card.remove()
+}
+
 
 const moedaSelect = document.getElementById("moeda");
 const valorMoeda = document.getElementById("valor-moeda");

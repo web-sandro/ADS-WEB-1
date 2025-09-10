@@ -81,6 +81,7 @@ header img{
     background: #47ee05;
 }
 .flexrow {
+    position: relative;
     margin-top: 20px;
     display: flex;
     width: 1000px;
@@ -92,14 +93,12 @@ aside {
     min-height: calc(50vh - 210px);
     background-color: bisque;
 }
-.main {
-    flex: 1;                   
+.main {                  
     display: flex;
     flex-wrap: wrap;
     margin-left: 3px;
     margin-right: auto;              
-    border-radius: 10px;
-    background-color: #5b74da;       
+    border-radius: 10px;      
     max-height: 240px;  
 }
 main {                 
@@ -109,10 +108,9 @@ main {
     margin-left: 3px;
     margin-right: auto;              
     border-radius: 10px;
-    background-color: #ececec;  
 }
-
 .card {
+    position: relative;
     background-color: #5b74da;
     border: 3px solid #18bd2b;
     width: 315px;
@@ -120,12 +118,11 @@ main {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    margin: 5px;
+    margin: 7px;
     padding: 10px;
     box-sizing: border-box;
     color: #fff;
 }
-
 .box_1 {
     display: flex;
     align-items: center;
@@ -137,7 +134,7 @@ main {
     align-items: center;
     width: 32%;
     height: 40px;
-    background: #e6efff;
+    border: 1px solid #ccc;
     color: #0a3d62;
     border-radius: 6px;
     padding: 3px 8px;
@@ -149,7 +146,7 @@ main {
     align-items: center;
     width: 22%;
     height: 40px;
-    background: #e6efff;
+    border: 1px solid #ccc;
     color: #0a3d62;
     border-radius: 6px;
     padding: 3px 8px;
@@ -186,7 +183,6 @@ main {
     flex-direction: row;
     align-items: center;
     padding: 8px 0px;   
-    background: #e6efff;
     color: #0a3d62;
     border-radius: 8px;
     gap: 5px;
@@ -243,7 +239,6 @@ main {
 .input-group input {
   height: 100%;
   font-size: 16px;
-  border: 1px solid #ccc;
   box-sizing: border-box;
 }
 .input-group select {
@@ -261,7 +256,6 @@ main {
     display: flex;
     flex-direction: row;
     padding: 8px 0px;
-    background: #e6efff;
     border-radius: 8px;
     margin-top: 25px;
     gap: 20px;
@@ -274,7 +268,6 @@ main {
     font-weight: bold;
     min-width: 30px;
     font-size: 20px;
-    background: #e6efff;
     color: #0a3d62;
 }
 .box_3_1 p{
@@ -284,7 +277,6 @@ main {
     font-weight: bold;
     min-width: 30px;
     font-size: 20px;
-    background: #e6efff;
     color: #0a3d62;
 }
 .box_3_2, .box_3_3, .box_3_4{
@@ -294,7 +286,6 @@ main {
     font-weight: bold;
     min-width: 30px;
     font-size: 20px;
-    background: #e6efff;
     color: #0a3d62;
 }
 .box_3_5 {
@@ -303,26 +294,25 @@ main {
     justify-content: center;
     font-weight: bold;
     font-size: 20px;
-    background: #e6efff;
     color: #0a3d62;
     text-align: center;
     min-width: 60px;
 }
 .modal {
-    position: fixed;           /* Fixa na tela */
-    top: 0;                    /* Começa no topo */
-    left: 0;                   /* Começa na esquerda */
-    right: 0;                  /* Vai até a direita */
-    bottom: 0;                 /* Vai até o fim da tela */
+    position: absolute;           
+    top: 0;                    
+    left: 0;                  
+    right: 0;                 
+    bottom: 0;              
     width: 100%;
     height: 100%;
-    background: rgba(243, 244, 245, 0.562); /* Fundo semi-transparente */
+    background: rgba(243, 244, 245, 0.562); 
     color: #0a0a0a;
-    display: none;             /* Inicia oculto */
-    justify-content: center;   /* Centralizar conteúdo */
-    align-items: center;       /* Centralizar verticalmente */
-    z-index: 9999;             /* Sempre acima do resto */
-    border: 1px solid red;   /* Apenas para visualização */
+    display: none;             
+    justify-content: center;  
+    align-items: center;      
+    z-index: 9999;            
+    border: 1px solid red;  
 }
 .modalContent {
     background: white;
@@ -366,4 +356,21 @@ footer {
 }
 footer p{
    margin: 0px;
+}
+.buttons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff8f;
+    border-radius: 10px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.buttons button{
+    margin: 0;
 }

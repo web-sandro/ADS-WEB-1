@@ -27,7 +27,7 @@
         <div class="flexrow">
             <main>
                 <div class="main">
-                    <div class="card">
+                    <div class="card" onmouseenter="showButtons(event)" onmouseleave="hideButtons(event)">
                         <div class="box_1">
                             <div class="box_1_1">
                                 <h4>IFSoftware</h4>
@@ -48,11 +48,16 @@
                             <div class="box_3_4">R$</div>
                             <div class="box_3_5">500,00</div>
                         </div>
+                        <div class="buttons">
+                            <button type="button" onclick="">Editar</button>
+                            <button type="button" onclick="deleteCard(event)">Excluir</button>
+                        </div>
                     </div>
                 </div>
+
             </main>
             <main>
-                <div class="modal">
+                <div class="modal" id="add">
                     <form class="modalContent" onsubmit="addModalContent(event)">
                         <div class="box_1">
                             <div class="box_1_1">
@@ -94,11 +99,55 @@
                         </div>
                     </form>
                 </div>
+                <div class="modal" id="edit">
+                    <form class="modalContent" onsubmit="addModalContent(event)">
+                        <div class="box_1">
+                            <div class="box_1_1">
+                                <label for="ifsoftware">APsoftware</label>
+                            </div>
+                            <div class="box_1_2">
+                                <select name="bolsa" id="bolsa">
+                                    <option value="nasdaq">Nasdaq</option>
+                                    <option value="nyse">NYSE</option>
+                                </select>
+                            </div>
+                        </div><br>
+                        <div class="box_2">
+                            <div class="box_2_1">
+                                <div class="input-group">
+                                    <select id="moeda" name="moeda">
+                                        <option value="r">R$</option>
+                                        <option value="$">$U</option>
+                                    </select>
+                                    <p id="valor-moeda">R$ 50.00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box_3">
+                            <div class="box_3_1">
+                                <input type="number" id="quantidade" name="quantidade" placeholder="Ativos" min="1">
+                            </div>
+                            <div class="box_3_2">
+                                <p id="valor-total">R$ 50.00</p>
+                            </div>
+                        </div>
+                        <div class="box_4">
+                            <nav>
+                                <ul>
+                                    <li><input type="submit" value="Editar"></li><br />
+                                    <li><button onclick="fecharModal()">Fechar</button></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </form>
+                </div>
             </main>
         </div>
     </div>
     <footer>
-        <p>< / > &copy; 2025 litoralnortesoftware.com.br | Todos os direitos reservados</p>
+        <p>
+            < /> &copy; 2025 litoralnortesoftware.com.br | Todos os direitos reservados
+        </p>
         <p>Desenvolvido por IFSoftware</p>
     </footer>
     <script src="js/script.js"></script>
