@@ -1,0 +1,272 @@
+/* ===============================
+   VARIÁVEIS GLOBAIS
+================================ */
+:root {
+  --bg-dark: #1e1e1e;
+  --bg-card: #2e3a8c;
+  --bg-wrapper: rgba(18, 95, 167, 0.55);
+  --bg-light: #ffffff;
+
+  --primary: #67f13d;
+  --secondary: #18bd2b;
+  --danger: #d211ec;
+
+  --text-dark: #0a3d62;
+  --text-light: #ffffff;
+
+  --radius: 10px;
+  --radius-sm: 6px;
+
+  --transition: 0.25s ease;
+  --shadow: 0 4px 10px rgba(0,0,0,.15);
+
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+/* ===============================
+   RESET / BASE
+================================ */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font);
+  background: var(--bg-dark);
+  color: var(--text-light);
+}
+
+/* ===============================
+   LAYOUT
+================================ */
+.wrapper {
+  width: 1000px;
+  margin: auto;
+  background: var(--bg-wrapper);
+  display: flex;
+}
+
+.wrapper,
+footer {
+  max-width: 1000px;
+  width: 100%;
+}
+
+
+.flexrow {
+  width: 100%;
+  display: flex;
+  margin-top: 20px;
+  min-height: 550px;
+}
+
+/* ===============================
+   HEADER
+================================ */
+header {
+  height: 90px;
+  background: #2c2c2c;
+}
+
+header .wrapper {
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 50px;
+}
+
+header nav ul {
+  display: flex;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+header nav li {
+  list-style: none;
+}
+
+header nav a,
+header nav button {
+  width: 140px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--danger);
+  background: transparent;
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+header nav a:hover,
+header nav button:hover {
+  background: linear-gradient(50deg, var(--primary), #f8fafa);
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* ===============================
+   MAIN / CARDS
+================================ */
+.main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+  align-items: start;
+}
+
+
+.card {
+  width: 315px;
+  height: 230px;
+  background: var(--bg-card);
+  border: 2px solid var(--secondary);
+  border-radius: var(--radius);
+  margin: 7px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: var(--shadow);
+}
+
+/* ===============================
+   BOXES
+================================ */
+.box_1,
+.box_2,
+.box_3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box_1 div,
+.box_2 div,
+.box_3 div {
+  background: #e6efff;
+  color: var(--text-dark);
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  font-weight: bold;
+}
+
+.box_2 {
+  margin-top: 15px;
+  gap: 10px;
+}
+
+.box_3 {
+  margin-top: auto;
+  gap: 15px;
+}
+
+/* ===============================
+   BUTTON OVERLAY
+================================ */
+.buttons {
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,.85);
+  border-radius: var(--radius);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.buttons button {
+  padding: 10px 18px;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: var(--transition);
+}
+
+.buttons button:first-child {
+  background: var(--primary);
+}
+
+.buttons button:last-child {
+  background: var(--danger);
+  color: white;
+}
+
+.buttons button:hover {
+  transform: scale(1.05);
+}
+
+/* ===============================
+   MODAL
+================================ */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.55);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+
+.modalContent {
+  width: 400px;
+  background: var(--bg-light);
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  color: #000;
+}
+
+.modal input,
+.modal select {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 10px;
+  padding: 0 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid #ccc;
+}
+
+/* ===============================
+   FOOTER
+================================ */
+footer {
+  width: 1000px;
+  margin: auto;
+  background: #000;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+body.modal-open .card {
+  pointer-events: none;
+}

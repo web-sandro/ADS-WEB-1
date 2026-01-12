@@ -1,12 +1,12 @@
 function openModal() {
-  const modal = document.querySelector(".modal")
-  modal.style.display = "flex"
+  document.body.classList.add("modal-open");
+  document.querySelector(".modal").style.display = "flex";
   console.log("foi")
 }
 
 function fecharModal() {
-  const modal = document.querySelector(".modal")
-  modal.style.display = "none"
+  document.body.classList.remove("modal-open");
+  document.querySelector(".modal").style.display = "none";
 }
 
 function addModalContent(event) {
